@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <meta name="description" content="My personal awesome profile website...">
+    <meta name="keywords" content="Arthur, Curry, Arthur Curry, Profile, Website">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="http://genehome.ddns.net/guestlist.html" />
+    <link rel="stylesheet" href="style.css">
+    <script src="validate.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2VQJHS1L2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y2VQJHS1L2');
+    </script>
+
+</head>
+
+<body onload="typeWriter()">
+
+    <div id="subHead" class="sticky">
+        <h2>The King of the Seven Seas</h2>
+    </div>
+
+
+    <div id="topbar">
+        <a class="guestNav" href="guestbook.html" title="Guestbook">Sign our Guestbook!</a>
+        <a href="contact.html" title="Contact">Contact</a>
+        <a href="family.html" title="Family">Family</a>
+        <a href="index.html" title="Home">Home</a>
+    </div>
+
+
+    <div class="profile">
+        <div class="image">
+            <img src="images/arthur.jpg" alt="Arthur" title="Arthur Curry" style="width:100%;">
+        </div>
+
+        <div class="heading">
+            <h2 id="Arthur"><span style="display:none">Arthur Curry</span></h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="titleHead">
+            <h2 class="PageTitle" id="post">Guestbook</h2>
+        </div>
+        <div class="card">
+
+            <h3>Please leave a message in our Guestbook.</h3>
+
+            <table>
+                <tr>
+                    <td class="guestLeft">
+                    <?php
+                        SESSION_START();
+                        include "add.php"; 
+                        include "guestlist.php";
+                    ?>
+                        <?php echo $msg ?>
+
+                        <div class="form">
+                            <form action="guestbook.html#post" method="POST" name="GuestBookForm" onSubmit="return formValidation()">
+
+                                <div class="formInputs">
+                                    <div class="colLabel">
+                                        <label for="name">Name</label>
+                                    </div>
+                                    <div class="inputs">
+                                        <input type="text" id="name" name="name" class="input" placeholder="Enter Name">
+                                    </div>
+                                </div>
+
+                                <div class="formInputs">
+                                    <div class="colLabel">
+                                        <label for="email">Email Id</label>
+                                    </div>
+                                    <div class="inputs">
+                                        <input type="email" id="email" name="email" class="input"
+                                            placeholder="Enter Email Address">
+                                    </div>
+                                </div>
+
+                                <div class="formInputs">
+                                    <div class="colLabel">
+                                        <label>Gender</label>
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="male">Male</label>
+                                        <input type="radio" value="male" name="gender" id="male">
+
+                                        <label for="female">Female</label>
+                                        <input type="radio" value="female" name="gender" id="female">
+                                    </div>
+                                </div>
+
+                                <div class="formInputs">
+                                    <div class="colLabel">
+                                        <label for="country">Country</label>
+                                    </div>
+                                    <div class="inputs">
+                                        <input type="text" id="country" name="country" class="input"
+                                            placeholder="Enter Country">
+                                    </div>
+                                </div>
+
+                                <div class="formInputs">
+                                    <div class="colLabel">
+                                        <label for="comments">Comments</label>
+                                    </div>
+                                    <div class="inputs">
+                                        <textarea id="comments" name="comments" cols="40" rows="5"
+                                            placeholder="Enter Comments"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="formInputs">
+                                    <div class="buttons">
+                                        <input type="submit" class="button" name="submit" value="Submit">
+                                        <input type="reset" class="button" value="Clear">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </td>
+
+                    <td class="guestRight">
+
+
+<?php
+                        if(mysqli_num_rows($result) > 0)
+                        {
+                            while($row = mysqli_fetch_assoc($result))
+                            {
+                                echo '
+                                    <div class="card">
+                                        <h3>'.$row["name"].'</h3>
+                                        <p class="subline">From '.$row["country"].' &ensp;&ensp; Email: '.$row["email"].'</p>
+                                        <p class="commentGuest"><q>'.$row["comments"].'</q></p>
+                                    </div>
+                                ';
+                            }
+                        }
+                        else
+                        {
+                            echo '<p class="alertError">Post Not Found</p>';
+                        }
+
+                        mysqli_close($conn);
+
+                        ?>
+
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; Copyright, 2020. All Rights Reserved.</p>
+    </div>
+
+    <!-- Typing Script -->
+
+    <script>
+        var i = 0;
+        var txt = 'Arthur Curry';
+        var speed = 250;
+        var pix = -1;
+        var Arthur = document.getElementById("Arthur");
+
+        function typeWriter() {
+            Arthur.style.width = "fit-content";
+            if (pix == -1) {
+                pix = 0;
+                cursor();
+            }
+            if (i < txt.length) {
+                Arthur.innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+
+                setTimeout(rem, 2000);
+            }
+        }
+
+        function rem() {
+            Arthur.innerHTML = "";
+            i = -1;
+            typeWriter();
+        }
+
+        function cursor() {
+
+            if (pix == 0) {
+                Arthur.style.borderRight = "5px solid";
+                Arthur.style.paddingRight = "5px";
+                pix = 1;
+                setTimeout(cursor, 300);
+            }
+            else if (pix == 1) {
+                Arthur.style.borderRight = "0px solid";
+                pix = 0;
+                setTimeout(cursor, 300);
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+body {
+    background-color: black;
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 94.5%;
+}
+
+.head {
+    text-align: center;
+    color: white;
+}
+
+.profile {
+    display: table;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.image {
+    display: table-cell;
+    width: 35%;
+    padding: 10px 60px 10px 10px;
+}
+
+.image img {
+    border: 5px solid white;
+    transition: 2s;
+}
+
+.image img:hover {
+    border: 5px solid black;
+}
+
+.heading {
+    display: table-cell;
+    width: 100%;
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 500%;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 5px black;
+}
+
+.heading>h2 {
+    padding-left: 20px;
+    border-left: 20px solid black;
+}
+
+#subHead {
+    color: white;
+    background-color: #272727;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 3px solid black;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.titleHead {
+    color: white;
+    background-color: #272727;
+    padding: 1px;
+    border-radius: 6px;
+}
+
+.PageTitle {
+    text-align: left;
+    padding-left: 15px;
+    text-transform: none;
+    border-left: 15px solid black;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+/* Navigation bar */
+
+#topbar {
+    margin-top: 130px;
+    overflow: hidden;
+    margin-bottom: -80px;
+    margin-right: 40px;
+}
+
+#topbar a {
+    float: right;
+    display: block;
+    color: #272727;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#topbar a:hover {
+    /* background-color: #272727; */
+    transition: 0.8s;
+    color: white;
+    border-bottom: 6px double white;
+}
+
+#topbar a.active {
+    /* background-color: #272727; */
+    color: white;
+    border-bottom: 6px double white;
+}
+
+.guestNav {
+    background-color: #272727 !important;
+    padding: 5px;
+    border-bottom: 6px double white;
+    color: white !important;
+}
+
+.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 30px;
+    background-color: white;
+    border-radius: 6px;
+    text-align: justify;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.card>h3 {
+    padding-left: 20px;
+    border-left: 10px solid black;
+}
+
+button {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: #272727;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s;
+    float: right;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+.ReadButton {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: #272727;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s;
+    float: right;
+    text-decoration: none;
+}
+
+.ReadButton:hover {
+    opacity: 0.7;
+}
+
+.c1 {
+    width: 30%;
+}
+
+.c2 {
+    width: 70%;
+    text-align: left;
+    vertical-align: top;
+    padding: 0 20px;
+    border-left: 2px solid crimson;
+}
+
+.c2 h2 {
+    font-size: 26px;
+    padding-left: 20px;
+    border-left: 10px solid black;
+}
+
+.title {
+    color: grey;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.footer {
+    text-align: center;
+    margin: 10px 0;
+    padding: 1px;
+    background-color: white;
+    border-radius: 6px;
+    border-top: 3px solid black;
+}
+
+.footer>p {
+    font-size: 18px;
+}
+
+.formLeft {
+    width: 40%;
+    padding: 10px;
+    vertical-align: top;
+    border-right: crimson 2px solid;
+}
+
+.formRight {
+    width: 60%;
+    padding: 10px 25px 10px 10px;
+    vertical-align: top;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+  }
+
+input, select, textarea {
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  select, .button {
+      width: 105%;
+  }
+
+  .button {
+      font-size: 20px;
+      background-color: #272727;
+      color: white;
+      transition: 0.5s;
+  }
+
+  .button:hover {
+        opacity: 0.7;
+  }
+
+  
+
+
+.form {
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    /* width: 0%; */
+}
+
+.form label {
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+.form input, select, textarea {
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 95%;
+  }
+
+.form input[type=radio], input[type=checkbox] {
+    width: 5%;
+}
+
+.formInputs:after {
+        content: "";
+        display: table;
+        clear: both;
+}
+
+.colLabel {
+    float: left;
+    width: 25%;
+    text-transform: uppercase;
+  }
+
+.inputs {
+    float: right;
+    width: 75%;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 10px;
+    margin: auto;
+    width: 50%;
+}
+
+.guestLeft {
+    width: 50%;
+    vertical-align: top;
+    padding: 10px 25px 10px 10px;
+    border-right: crimson 2px solid;
+}
+
+.guestRight {
+    width: 50%;
+    padding: 10px 10px 10px 25px;
+    vertical-align: top;
+    text-align: left;
+    padding-top: 0;
+}
+
+.guestRight .card {
+    padding: 0 0 0 20px;
+}
+
+.card .subline {
+    color: #8b8b8b;
+    /* font-style: italic; */
+    padding-left: 30px;
+    margin-top: -10px;
+}
+
+.card .commentGuest {
+    font-style: italic;
+    margin: 0 30px 20px 30px;
+    text-align: justify;
+}
+
+
+.alertSuccess {
+    text-align: center;
+    padding: 10px;
+    background-color: lightgreen;
+    color: darkgreen;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.alertError {
+    text-align: center;
+    padding: 10px;
+    background-color: pink;
+    color: red;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+table  {
+    width: 100%;
+}

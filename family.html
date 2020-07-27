@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <meta name="description" content="My personal awesome profile website...">
+    <meta name="keywords" content="Arthur, Curry, Arthur Curry, Profile, Website">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="http://genehome.ddns.net/family.html" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2VQJHS1L2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y2VQJHS1L2');
+    </script>
+
+</head>
+
+<body onload="typeWriter()">
+
+    <div id="subHead" class="sticky">
+        <h2>The King of the Seven Seas</h2>
+    </div>
+
+
+    <div id="topbar">
+        <a class="guestNav" href="guestbook.html" title="Guestbook">Sign our Guestbook!</a>
+        <a href="contact.html" title="Contact">Contact</a>
+        <a class="active" href="family.html" title="Family">Family</a>
+        <a href="index.html" title="Home">Home</a>
+    </div>
+
+
+    <div class="profile">
+        <div class="image">
+            <img src="images/arthur.jpg" alt="Arthur" title="Arthur Curry" style="width:100%;">
+        </div>
+
+        <div class="heading">
+            <h2 id="Arthur"><span style="display:none">Arthur Curry</span></h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="titleHead">
+            <h2 class="PageTitle">Here is my Family Tree</h2>
+        </div>
+        <div class="card">
+            <table>
+                <tr>
+                    <td rowspan="2" class="c1">
+                        <div class="image"><img src="images/Thomas_Curry.png" alt="Thomas Curry" title="Thomas Curry" style="width:100%;"></div>
+                    </td>
+                    <td class="c2">
+                        <h2>Thomas Curry</h2>
+                        <p class="title">
+                            Thomas "Tom" Curry is the husband of Queen Atlanna and the father of Arthur Curry.
+                            <br>
+                            In 1985, Thomas found and rescued Atlanna, the queen of the underwater nation of Atlantis
+                            who was washed ashore unconscious near his lighthouse, and soon fell in love with her.
+                            <br>
+                            In January of the following year, Atlanna gave birth to their infant son. After Atlantean
+                            solders attacked the lighthouse, Atlanna is forced to leave them, but promised to return.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="c2">
+                        <p><a class="ReadButton" href="https://dcextendeduniverse.fandom.com/wiki/Thomas_Curry"
+                                target="_blank">Read
+                                    More</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <table>
+                <tr>
+                    <td rowspan="2" class="c1">
+                        <div class="image"><img src="images/Aquaman_Queen.jpg" alt="Queen Atlanna" title="Queen Atlanna" style="width:100%;"></div>
+                    </td>
+                    <td class="c2">
+                        <h2>Queen Atlanna</h2>
+                        <p class="title">
+                            Queen Atlanna is the mother of Arthur Curry and the former queen of the underwater nation of
+                            Atlantis.
+                            <br>
+                            In 1978, Atlanna fled Atlantis as she did not want to marry Orvex as part of an arranged
+                            marriage. She met a human by the name of Thomas Curry, whom she fell in love with. A year
+                            later, in January, Atlanna had a child by Thomas, whom she named Arthur.
+                            <br>
+                            However, due to dangers that would follow her newborn son should he be discovered, Atlanna
+                            was forced to abandon him with his father, an act that affected her deeply. To ensure her
+                            child never forgot where he came from, Atlanna left him her quindent as her legacy.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="c2">
+                        <p><a class="ReadButton" href="https://dcextendeduniverse.fandom.com/wiki/Atlanna" target="_blank">Read
+                                    More</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <table>
+                <tr>
+                    <td rowspan="2" class="c1">
+                            <div class="image"><img src="images/Aquaman_Princess_Mera.jpg" alt="Princess Mera" title="Princess Mera" style="width:100%;"></div>
+                    </td>
+                    <td class="c2">
+                        <h2>Princess Mera</h2>
+                        <p class="title">
+                            Princess Y'Mera Xebella Challa, daughter of King Nereus.
+                            <br>
+                            Princess Mera was taken in by Queen Atlanna while her parents fought in the wars of Xebel,
+                            training her as the Queen's protegee. Over time, Mera became a prominent military figure in
+                            Atlantis, leading the Atlantean Guard later in life.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="c2">
+                        <p><a class="ReadButton" href="https://dcextendeduniverse.fandom.com/wiki/Mera" target="_blank">Read
+                                    More</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Copyright, 2020. All Rights Reserved.</p>
+    </div>
+
+    <!-- Typing Name Script -->
+
+    <script>
+        var i = 0;
+        var txt = 'Arthur Curry';
+        var speed = 250;
+        var pix = -1;
+        var Arthur = document.getElementById("Arthur");
+
+        function typeWriter() {
+            Arthur.style.width = "fit-content";
+            if (pix == -1) {
+                pix = 0;
+                cursor();
+            }
+            if (i < txt.length) {
+                Arthur.innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+
+                setTimeout(rem, 2000);
+            }
+        }
+
+        function rem() {
+            Arthur.innerHTML = "";
+            i = -1;
+            typeWriter();
+        }
+
+        function cursor() {
+
+            if (pix == 0) {
+                Arthur.style.borderRight = "5px solid";
+                Arthur.style.paddingRight = "5px";
+                pix = 1;
+                setTimeout(cursor, 300);
+            }
+            else if (pix == 1) {
+                Arthur.style.borderRight = "0px solid";
+                pix = 0;
+                setTimeout(cursor, 300);
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

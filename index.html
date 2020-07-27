@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Curry</title>
+    <meta name="description" content="My personal awesome profile website...">
+    <meta name="keywords" content="Arthur, Curry, Arthur Curry, Profile, Website">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="http://genehome.ddns.net/index.html" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2VQJHS1L2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y2VQJHS1L2');
+    </script>
+    
+</head>
+
+<body onload="typeWriter()">
+
+    <div id="subHead" class="sticky">
+        <h2>The King of the Seven Seas</h2>
+    </div>
+
+
+    <div id="topbar">
+        <a class="guestNav" href="guestbook.html" title="Guestbook">Sign our Guestbook!</a>
+        <a href="contact.html" title="Contact">Contact</a>
+        <a href="family.html" title="Family">Family</a>
+        <a class="active" href="index.html" title="Home">Home</a>
+    </div>
+    
+    <div class="profile">
+        <div class="image">
+            <img src="images/arthur.jpg" alt="Arthur" title="Arthur Curry" style="width:100%;">
+        </div>
+
+        <div class="heading">
+            <h2 id="Arthur"><span style="display:none">Arthur Curry</span></h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="titleHead">
+            <h2 class="PageTitle">Here is my Profile</h2>
+        </div>
+        <div class="card">
+
+            <h3>PROFILE</h3>
+            <p>The King of Atlantis, as well as the superhero known as Aquaman. While initially reserved and content
+                with
+                his isolation from the surface world, Aquaman would eventually be recruited by Batman to join the
+                Justice
+                League in order to help defend Earth against the forces of Steppenwolf and his Parademon army.</p>
+            <p>Afterward, Arthur decided to finally pursue his rightful place in Atlantis - he retrieved the Trident of
+                Atlantis from the Hidden Sea, defeated Orm, and became king, though he also unintentionally created a
+                new
+                and dangerous villain in Black Manta.</p>
+        </div>
+
+        <div class="card">
+            <h3>PROFESSIONAL EXPERIENCE</h3>
+            <p>SuperHero - Aquaman (Jan 1992 - Present)</p>
+        </div>
+
+        <div class="card">
+            <h3>KEY CONTRIBUTIONS</h3>
+            <ul>
+                <li>
+                    <p>Saving multiple lives from storm in the seas.</p>
+                </li>
+                <li>
+                    <p>Driving back Steppenwolf, forcing the alien invasion into retreat.</p>
+                </li>
+                <li>
+                    <p>Retrieve the Trident of Atlantis as the new ruler of the underwater kingdom, Atlantis.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>EDUCATION</h3>
+            <ul>
+                <li>
+                    <p>Vulko, the Chief Advisor to the King of Atlantis, and began to train him in unlocking his
+                        Atlantean
+                        abilities so that one day Arthur could take his place as the rightful ruler of Atlantis.</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; Copyright, 2020. All Rights Reserved.</p>
+    </div>
+
+    <!-- Typing Script -->
+
+    <script>
+        var i = 0;
+        var txt = 'Arthur Curry';
+        var speed = 250;
+        var pix = -1;
+        var Arthur = document.getElementById("Arthur");
+
+        function typeWriter() {
+            Arthur.style.width = "fit-content";
+            if (pix == -1) {
+                pix = 0;
+                cursor();
+            }
+            if (i < txt.length) {
+                Arthur.innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+
+                setTimeout(rem, 2000);
+            }
+        }
+
+        function rem() {
+            Arthur.innerHTML = "";
+            i = -1;
+            typeWriter();
+        }
+
+        function cursor() {
+
+            if (pix == 0) {
+                Arthur.style.borderRight = "5px solid";
+                Arthur.style.paddingRight = "5px";
+                pix = 1;
+                setTimeout(cursor, 300);
+            }
+            else if (pix == 1) {
+                Arthur.style.borderRight = "0px solid";
+                pix = 0;
+                setTimeout(cursor, 300);
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

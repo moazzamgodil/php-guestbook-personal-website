@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <meta name="description" content="My personal awesome profile website...">
+    <meta name="keywords" content="Arthur, Curry, Arthur Curry, Profile, Website">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="http://genehome.ddns.net/contact.html" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2VQJHS1L2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y2VQJHS1L2');
+    </script>
+    
+</head>
+
+<body onload="typeWriter()">
+
+    <div id="subHead" class="sticky">
+        <h2>The King of the Seven Seas</h2>
+    </div>
+
+
+    <div id="topbar">
+        <a class="guestNav" href="guestbook.html" title="Guestbook">Sign our Guestbook!</a>
+        <a class="active" href="contact.html" title="Contact">Contact</a>
+        <a href="family.html" title="Family">Family</a>
+        <a href="index.html" title="Home">Home</a>
+
+    </div>
+
+
+    <div class="profile">
+        <div class="image">
+            <img src="images/arthur.jpg" alt="Arthur" title="Arthur Curry" style="width:100%;">
+        </div>
+
+        <div class="heading">
+            <h2 id="Arthur"><span style="display:none">Arthur Curry</span></h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="titleHead">
+            <h2 class="PageTitle">I live in Atlantis</h2>
+        </div>
+        <div class="card">
+            <h3 style="margin: 0;text-align: center; font-size: 28px; border: none;">Contact Us</h3>
+        </div>
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="formLeft">
+                        <h3 style="text-align: center;">My Location Map</h3>
+                <img src="images/map.jpg" alt="Map" title="Map" style="width:100%">
+                    </td>
+                    <td class="formRight">
+                        
+                        <h4 style="text-align: center;">If you anything to ask me, feel free to drop me a email...</h4>
+
+                        <form>
+
+                            <label for="firstName">First Name</label><br>
+                            <input required type="text" id="firstName" name="firstName" class="input" placeholder="Enter First Name">
+                            
+                            <br>
+
+                            <label for="lastName">Last Name</label><br>
+                            <input required type="text" id="lastName" name="lastName" class="input" placeholder="Enter Last Name">
+                            
+                            <br>
+
+                            <label>Country</label><br>
+                            <select required name="country">
+                                <option value="">Select Country:</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="USA">USA</option>
+                                <option value="Others">Others</option>
+                            </select>
+
+                            <br>
+
+                            <label for="message">Message</label><br>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Message"></textarea>
+                            
+                            <br>
+
+                            <input type="submit" class="button" value="Send">
+  
+
+                </form>
+                    </td>
+                </tr>
+                
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; Copyright, 2020. All Rights Reserved.</p>
+    </div>
+
+    <!-- Typing Script -->
+
+    <script>
+        var i = 0;
+        var txt = 'Arthur Curry';
+        var speed = 250;
+        var pix = -1;
+        var Arthur = document.getElementById("Arthur");
+
+        function typeWriter() {
+            Arthur.style.width = "fit-content";
+            if (pix == -1) {
+                pix = 0;
+                cursor();
+            }
+            if (i < txt.length) {
+                Arthur.innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+
+                setTimeout(rem, 2000);
+            }
+        }
+
+        function rem() {
+            Arthur.innerHTML = "";
+            i = -1;
+            typeWriter();
+        }
+
+        function cursor() {
+
+            if (pix == 0) {
+                Arthur.style.borderRight = "5px solid";
+                Arthur.style.paddingRight = "5px";
+                pix = 1;
+                setTimeout(cursor, 300);
+            }
+            else if (pix == 1) {
+                Arthur.style.borderRight = "0px solid";
+                pix = 0;
+                setTimeout(cursor, 300);
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
